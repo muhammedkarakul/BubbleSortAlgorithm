@@ -7,7 +7,7 @@
 //
 
 #include <iostream>
-#include <stdlib.h> //for rand() function
+#include <stdlib.h> 
 using namespace std;
 
 void printArray (int dizi[], int elemanSayisi) {
@@ -20,7 +20,7 @@ void printArray (int dizi[], int elemanSayisi) {
 
 void bubbleSort(int dizi[], int elemanSayisi) {
     int temp,i,j;
-    bool is_swap = false;    //is_swap variable is set to true if any swap between any two elements occur   
+    bool isSwap = false;    //is_swap variable is set to true if any swap between any two elements occur   
     printArray(dizi, elemanSayisi);
     
     for (i = 0; i < elemanSayisi; i++) {
@@ -30,11 +30,10 @@ void bubbleSort(int dizi[], int elemanSayisi) {
                 temp = dizi[j];
                 dizi[j] = dizi[j+1];
                 dizi[j+1] = temp;
-                 is_swap = true;
+                 isSwap = true;
             }
         }
-        if (is_swap == false)      //if no swap occurs implies all the elements are in sorted order. No need of conditions to loop to run further. 
-        {
+        if (isSwap == false) {
           break;   
         }
     }
