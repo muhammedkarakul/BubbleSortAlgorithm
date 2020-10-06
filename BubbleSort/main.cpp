@@ -20,7 +20,7 @@ void printArray (int dizi[], int elemanSayisi) {
 
 void bubbleSort(int dizi[], int elemanSayisi) {
     int temp,i,j;
-    bool isSwap = false;    //is_swap variable is set to true if any swap between any two elements occur   
+    bool isSwap = false;      
     printArray(dizi, elemanSayisi);
     
     for (i = 0; i < elemanSayisi; i++) {
