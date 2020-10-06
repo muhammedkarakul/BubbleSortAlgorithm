@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <stdlib.h> 
 using namespace std;
 
 void printArray (int dizi[], int elemanSayisi) {
@@ -19,16 +20,21 @@ void printArray (int dizi[], int elemanSayisi) {
 
 void bubbleSort(int dizi[], int elemanSayisi) {
     int temp,i,j;
-    
+    bool isSwap = false;      
     printArray(dizi, elemanSayisi);
     
     for (i = 0; i < elemanSayisi; i++) {
+         is_swap = false;
         for (j = 0; j < elemanSayisi-i-1; j++) {
             if ( dizi[j] > dizi[j+1] ) {
                 temp = dizi[j];
                 dizi[j] = dizi[j+1];
                 dizi[j+1] = temp;
+                 isSwap = true;
             }
+        }
+        if (isSwap == false) {
+          break;   
         }
     }
     
